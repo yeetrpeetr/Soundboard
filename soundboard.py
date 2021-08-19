@@ -2,7 +2,8 @@ from tkinter import *
 from tkinter import filedialog
 import tkinter
 from pygame import mixer
-from playsound import playsound
+
+mixer.init()
 
 class MusicPlayer:
     def __init__(self, window ):
@@ -31,30 +32,24 @@ class MusicPlayer:
 
     def play1(self):
         if self.music_file1:
-            mixer.init()
             mixer.music.load(self.music_file1)
             mixer.music.play()
     def play2(self):
         if self.music_file2:
-            mixer.init()
             mixer.music.load(self.music_file2)
             mixer.music.play()
     def play3(self):
         if self.music_file:
-            mixer.init()
             mixer.music.load(self.music_file3)
             mixer.music.play()      
 
     def Repeat1(self):
-            mixer.init()
             mixer.music.load(self.music_file1)
             mixer.music.play(-1)
     def Repeat2(self):
-            mixer.init()
             mixer.music.load(self.music_file2)
             mixer.music.play(-1)
     def Repeat3(self):
-            mixer.init()
             mixer.music.load(self.music_file3)
             mixer.music.play(-1)
 
